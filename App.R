@@ -171,13 +171,13 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
   produksi_data <- reactive({
-    read_excel("data/Perkebunan_Sumatra.xlsx")
+    read_excel("Perkebunan_Sumatra.xlsx")
   })
   iklim_data <- reactive({
-    read_excel("data/Iklim_Sumatra.xlsx")
+    read_excel("Iklim_Sumatra.xlsx")
   })
   shape_sumatera <- reactive({
-    st_read("asset/indonesia-prov.geojson")
+    st_read("indonesia-prov.geojson")
   })
   iklim_tahunan <- reactive({
     iklim_data() %>%
